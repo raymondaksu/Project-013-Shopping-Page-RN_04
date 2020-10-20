@@ -21,9 +21,9 @@ const App = () => {
   }, []);
   useEffect(() => {
       const filteredValue = productData.filter((item) => {
-      const text = searchValue.toUpperCase();
-      const productTitle = item.title.toUpperCase();
-      return productTitle.indexOf(text) > -1;
+        const text = searchValue.toUpperCase();
+        const productTitle = item.title.toUpperCase();
+        return productTitle.indexOf(text) > -1;
     });
     setDisplayList(filteredValue);
   }, [searchValue]);
